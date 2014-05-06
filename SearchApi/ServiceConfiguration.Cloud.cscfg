@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="SearchApi" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2012-10.1.8">
+  <Role name="SearchApiWebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=hack3city;AccountKey=cncWte/Xy9qCMd5ro0f3s+kn/s40VZC5/l+OsHpZYF1H+JkiyKt2IxaEkviFDESf59zgeEdz7+IuoQk5H3Mv2g==" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
