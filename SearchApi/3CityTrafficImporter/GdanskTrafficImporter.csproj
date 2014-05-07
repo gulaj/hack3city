@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6CA1BE87-CCE4-4C42-A28A-E721E3465A0D}</ProjectGuid>
+    <ProjectGuid>{EDAA4D13-2BC6-467A-9A95-A10C8F2D1433}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Services</RootNamespace>
-    <AssemblyName>Services</AssemblyName>
+    <RootNamespace>_3CityTrafficImporter</RootNamespace>
+    <AssemblyName>3CityTrafficImporter</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -44,44 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IEstatesSearchService.cs" />
-    <Compile Include="ImportService.cs" />
-    <Compile Include="IStationsSearchService.cs" />
-    <Compile Include="MockEstatesSearchService.cs" />
-    <Compile Include="MockStationsSearchService.cs" />
-    <Compile Include="EstatesSearchService.cs" />
-    <Compile Include="SearchDBContext.cs" />
-    <Compile Include="StationsSearchService.cs" />
+    <Compile Include="Importer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\3CityStationsImporter\GdanskStationsImporter.csproj">
-      <Project>{cb8a7b13-30b8-4331-84bc-6da67c932240}</Project>
-      <Name>GdanskStationsImporter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\3CityTrafficImporter\GdanskTrafficImporter.csproj">
-      <Project>{edaa4d13-2bc6-467a-9a95-a10c8f2d1433}</Project>
-      <Name>GdanskTrafficImporter</Name>
-    </ProjectReference>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\DbModels\DbModels.csproj">
       <Project>{3d0ac8ad-bad6-4203-a398-b563fa163ea0}</Project>
       <Name>DbModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EstatesImporter\EstatesImporter.csproj">
-      <Project>{7277cd2b-acf8-4e36-8a64-0c335b422f5e}</Project>
-      <Name>EstatesImporter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Models\DtoModels.csproj">
-      <Project>{9c0cb191-8a7f-479c-8836-84ff8fbbb612}</Project>
-      <Name>DtoModels</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

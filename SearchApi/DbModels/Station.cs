@@ -16,5 +16,7 @@ namespace DbModels
         public DbGeography Location { get; set; }
 
         public int TimeToBasePoint { get; set; }
+
+        public string CommunicationLine { get; set; }
     }
 }

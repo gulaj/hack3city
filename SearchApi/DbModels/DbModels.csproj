@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BufforEstate.cs" />
+    <Compile Include="BufforStation.cs" />
+    <Compile Include="CommunicationLine.cs" />
     <Compile Include="Estate.cs" />
     <Compile Include="Station.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

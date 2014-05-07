@@ -10,6 +10,11 @@ namespace Services
 {
     public class SearchDBContext : DbContext
     {
+        public SearchDBContext()
+            : base("DefaultConnection")
+        {
+        }
+
         public DbSet<Station> Stations { get; set; }
 
         public DbSet<Estate> Estates { get; set; }
